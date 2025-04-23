@@ -52,60 +52,6 @@ nav {
       background-position: 0% 0%;
     }
   }
-
-  .circle-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 100px auto;
-    border-radius: 50%;
-    background: #f7f7f7;
-    box-shadow: 0 0 30px rgba(0,0,0,0.1);
-  }
-  
-  .category {
-    position: absolute;
-    width: 120px;
-    height: 60px;
-    background-color: #ececec;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .category:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Positioning */
-  .top {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .bottom {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .left {
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-  }
-  
-  .right {
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
   
 .kyle-banner {
     background: linear-gradient(to right, #FFD700, #D3D3D3);
@@ -127,6 +73,55 @@ nav {
     justify-content: center;
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+  .circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .circle-container .tab {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .circle-container .top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1c40f; /* Light Gold */
+  }
+  
+  .circle-container .bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e74c3c; /* Light Red */
+  }
+  
+  .circle-container .left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #2ecc71; /* Light Green */
+  }
+  
+  .circle-container .right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #3498db; /* Light Blue */
+  }
 
 .tab {
     text-decoration: none;
