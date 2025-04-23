@@ -74,10 +74,10 @@ nav {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-  .circle-container {
+.circle-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     margin: 40px auto;
     list-style: none;
     padding: 0;
@@ -85,45 +85,41 @@ nav {
   
   .circle-container .tab {
     position: absolute;
-    width: 150px;
-    height: 60px;
-    line-height: 60px;
     text-align: center;
+    width: 180px;
+    padding: 20px 15px;
+    font-size: 18px;
     border-radius: 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
   }
   
-  .circle-container .top {
+  /* Positioning */
+  .tab.top {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f1c40f; /* Light Gold */
   }
   
-  .circle-container .bottom {
+  .tab.bottom {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #e74c3c; /* Light Red */
   }
   
-  .circle-container .left {
+  .tab.left {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background-color: #2ecc71; /* Light Green */
   }
   
-  .circle-container .right {
+  .tab.right {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-color: #3498db; /* Light Blue */
   }
 
-.tab {
+/* .tab {
     text-decoration: none;
     border-radius: 40px;
     font-weight: bold;
@@ -133,7 +129,22 @@ nav {
     transition: background-color 0.3s, transform 0.2s;
     font-size: 18px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+} */
+.tab {
+    text-decoration: none;
+    padding: 30px 35px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    position: absolute; /* added for circular layout */
+  }
 
 .tabs li:nth-child(1) .tab {
     background-color: #fff8dc; 
