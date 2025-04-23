@@ -151,6 +151,16 @@ nav {
     justify-content: center;
   }
 
+  .tab {
+    position: absolute;
+    width: 160px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
 .tabs li:nth-child(1) .tab {
     background-color: #fff8dc; 
 }
