@@ -52,6 +52,60 @@ nav {
       background-position: 0% 0%;
     }
   }
+
+  .circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    border-radius: 50%;
+    background: #f7f7f7;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  }
+  
+  .category {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background-color: #ececec;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .category:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Positioning */
+  .top {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .right {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
   
 .kyle-banner {
     background: linear-gradient(to right, #FFD700, #D3D3D3);
@@ -76,7 +130,6 @@ nav {
 
 .tab {
     text-decoration: none;
-    padding: 40px 60px; 
     border-radius: 40px;
     font-weight: bold;
     color: #333;
@@ -113,14 +166,14 @@ nav {
     filter: brightness(90%);
 }
 
-.tabs {
+/* .tabs {
     display: flex;
     justify-content: space-around;
     width: 80%;
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
+} */
 
 .tab-content {
     display: none; 
@@ -131,7 +184,6 @@ nav {
     border-radius: 8px;
 }
 
-/* Active Tab Content (visible) */
 .tab-content.active {
     display: block; 
     opacity: 1; 
@@ -143,7 +195,7 @@ nav {
 }
 
 /* Individual Tab */
-.tab {
+/* .tab {
     text-decoration: none;
     padding: 30px 35px;
     background-color: #f0f0f0;
@@ -153,7 +205,7 @@ nav {
     border: 1px solid #ccc;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s, transform 0.2s;
-}
+} */
 
 .tab:hover {
     background-color: #e6e6e6;
