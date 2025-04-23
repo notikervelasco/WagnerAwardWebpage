@@ -78,18 +78,20 @@ nav {
     position: relative;
     width: 400px;
     height: 400px;
-    margin: 0 auto;
-    list-style: none;
+    margin: 40px auto; /* horizontally center */
     padding: 0;
+    list-style: none;
+    display: block;
   }
   
   .circle-container li {
     position: absolute;
   }
   
+  /* Shared tab styles */
   .tab {
-    width: 100px;
-    height: 50%;
+    width: 160px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,32 +107,32 @@ nav {
     position: absolute;
   }
   
-  /* Specific positioning in a circular layout */
+  /* Top/Bottom/Left/Right tab layout */
   .tab.top {
-    top: 10%;
+    top: 0;
     left: 50%;
-    /* transform: translate(-50%, -50%); */
+    transform: translateX(-50%);
   }
   
   .tab.bottom {
-    bottom: 10%;
+    bottom: 0;
     left: 50%;
-    /* transform: translate(-50%, 50%); */
+    transform: translateX(-50%);
   }
   
   .tab.left {
     top: 50%;
-    left: 10%;
-    /* transform: translate(-50%, -50%); */
+    left: 0;
+    transform: translateY(-50%);
   }
   
   .tab.right {
     top: 50%;
-    right: 10%;
-    /* transform: translate(50%, -50%); */
+    right: 0;
+    transform: translateY(-50%);
   }
   
-  /* Unique backgrounds */
+  /* Individual colors */
   .tab[data-tab="tab1"] {
     background-color: #fff8dc;
   }
@@ -144,24 +146,26 @@ nav {
     background-color: #ffd6d6;
   }
   
-  /* Hover & Active State — no movement */
+  /* Hover — no movement */
   .tab:hover {
     background-color: #e6e6e6;
     filter: brightness(95%);
+    transform: none !important; /* Prevent transform override on hover */
   }
   
   .tab:active {
     background-color: #dcdcdc;
     filter: brightness(90%);
+    transform: none !important;
   }
   
-  /* Active tab style */
+  /* Active tab */
   .tab.active {
     background-color: #dcdcdc;
     color: #333;
   }
   
-  /* Tab content */
+  /* Tab content visibility */
   .tab-content {
     display: none;
     opacity: 0;
