@@ -88,8 +88,8 @@ nav {
   }
   
   .tab {
-    width: 160px;
-    height: 80px;
+    width: 100px;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,25 +109,25 @@ nav {
   .tab.top {
     top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
   }
   
   .tab.bottom {
     bottom: 10%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    /* transform: translate(-50%, 50%); */
   }
   
   .tab.left {
     top: 50%;
     left: 10%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
   }
   
   .tab.right {
     top: 50%;
     right: 10%;
-    transform: translate(50%, -50%);
+    /* transform: translate(50%, -50%); */
   }
   
   /* Unique backgrounds */
