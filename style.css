@@ -146,15 +146,14 @@ nav {
     margin: 60px auto; 
     list-style: none;
     padding: 0;
-    background-color: #444;
+    /* background-color: #444; */
     /* align-items: center;
-    justify-content: center; */
+    justify-conten1t: center; */
 }
 
 .circle-container li {
     position: absolute;
 }
-
 
 .launch-screen {
     position: fixed;
