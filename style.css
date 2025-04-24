@@ -68,20 +68,14 @@ nav {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.tab-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* space between tabs */
-    margin-top: 40px; /* space from banner */
-    flex-wrap: wrap; /* allows wrapping if screen too small */
-}
 
-.tab-container {
+
+/* .tab-container {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin: 40px 0;
-}
+} */
 
 .tab {
     width: 125px;
@@ -135,6 +129,13 @@ nav {
 .tab-content.active {
     display: block;
     opacity: 1;
+}
+.tab-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* space between tabs */
+    margin-top: 40px; /* space from banner */
+    flex-wrap: wrap; /* allows wrapping if screen too small */
 }
 
 .launch-screen {
