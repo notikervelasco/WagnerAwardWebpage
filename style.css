@@ -102,25 +102,21 @@ nav {
 .tab.top {
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0);
 }
 
 .tab.bottom {
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0);
 }
 
 .tab.left {
     top: 50%;
     left: 0;
-    transform: translate(0, -50%);
 }
 
 .tab.right {
     top: 50%;
     right: 0;
-    transform: translate(0, -50%);
 }
 
 .tab[data-tab="tab1"] { background-color: #fff8dc; }
