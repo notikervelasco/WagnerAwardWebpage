@@ -4,7 +4,6 @@ body {
     background-color: white;
     cursor: crosshair;
 }
-
 html, body {
     height: 100%; 
     margin: 0;    
@@ -23,8 +22,8 @@ header {
 header h1 {
     font-size: 36px;
     position: relative;
-    left: 50%; 
-    transform: translateX(-50%);
+    left: 20%; 
+    transform: translateX(-20%);
     font-weight: bold;
     border-radius: 12px;
     padding: 10px 20px;
@@ -74,7 +73,6 @@ nav {
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
-    flex-wrap: wrap; /* optional if you want them to wrap on smaller screens */
 }
 
 .tab-container {
