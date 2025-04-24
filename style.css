@@ -3,6 +3,10 @@ body {
     font-family: 'Segoe UI', 'Arial Rounded MT Bold', sans-serif;
     background-color: white;
     cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full screen height */
 }
 
 html, body {
