@@ -68,23 +68,6 @@ nav {
     justify-content: center;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-.circle-container {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: 60px auto; 
-    list-style: none;
-    padding: 0;
-    background-color: #444;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .circle-container li {
-    position: absolute;
-} */
-
 .tab {
     width: 125px;
     height: 75px;
@@ -121,6 +104,23 @@ nav {
     top: 50%;
     right: 0;
 }
+
+.circle-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 60px auto; 
+    list-style: none;
+    padding: 0;
+    background-color: #444;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-container li {
+    position: absolute;
+}
+
 
 .tab[data-tab="tab1"] { background-color: #fff8dc; }
 .tab[data-tab="tab2"] { background-color: #d6f0ff; }
