@@ -111,25 +111,25 @@ nav {
   .tab.top {
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
   
   .tab.bottom {
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
   }
   
   .tab.left {
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
   }
   
   .tab.right {
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
   }
   
   /* Individual colors */
@@ -150,13 +150,11 @@ nav {
   .tab:hover {
     background-color: #e6e6e6;
     filter: brightness(95%);
-    transform: none !important; /* Prevent transform override on hover */
   }
   
   .tab:active {
     background-color: #dcdcdc;
     filter: brightness(90%);
-    transform: none !important;
   }
   
   /* Active tab */
