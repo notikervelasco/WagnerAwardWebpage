@@ -151,6 +151,30 @@ nav {
     animation: fadeOut 1s ease 3s forwards;
 }
 
+.tab-with-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.tab-image {
+    width: 120px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    object-fit: cover;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tab-with-image:hover .tab-image {
+    height: 80px;
+    opacity: 1;
+}
+
 .name-container {
     text-align: center;
     position: relative;
