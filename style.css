@@ -4,6 +4,7 @@ body {
     background-color: white;
     cursor: crosshair;
 }
+
 html, body {
     height: 100%; 
     margin: 0;    
@@ -22,8 +23,8 @@ header {
 header h1 {
     font-size: 36px;
     position: relative;
-    left: 20%; 
-    transform: translateX(-20%);
+    left: 50%; 
+    transform: translateX(-50%);
     font-weight: bold;
     border-radius: 12px;
     padding: 10px 20px;
@@ -40,19 +41,13 @@ nav {
     justify-content: center;
     align-items: center;
 }
-  
-  @keyframes slideGradient {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-  
+
+@keyframes slideGradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
 .kyle-banner {
     background: linear-gradient(to right, #FFD700, #D3D3D3);
     background-size: 200% 100%;
@@ -76,20 +71,18 @@ nav {
 
 .circle-container {
     position: relative;
-    width: 50%;
-    height: 50%;
-    margin: 40px auto; 
-    padding: 0;
+    width: 400px;
+    height: 400px;
+    margin: 60px auto; 
     list-style: none;
-    display: center;
-  }
-  
-  .circle-container li {
+    padding: 0;
+}
+
+.circle-container li {
     position: absolute;
-  }
-  
-  /* Shared tab styles */
-  .tab {
+}
+
+.tab {
     width: 160px;
     height: 80px;
     display: flex;
@@ -104,79 +97,60 @@ nav {
     border: 1px solid #ccc;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s;
-    /* position: absolute; */
-  }
-  
-  /* Top/Bottom/Left/Right tab layout */
-  .tab.top {
+}
+
+.tab.top {
     top: 0;
     left: 50%;
-    /* transform: translateX(-50%); */
-  }
-  
-  .tab.bottom {
+    transform: translate(-50%, 0);
+}
+
+.tab.bottom {
     bottom: 0;
     left: 50%;
-    /* transform: translateX(-50%); */
-  }
-  
-  .tab.left {
+    transform: translate(-50%, 0);
+}
+
+.tab.left {
     top: 50%;
     left: 0;
-    /* transform: translateY(-50%); */
-  }
-  
-  .tab.right {
+    transform: translate(0, -50%);
+}
+
+.tab.right {
     top: 50%;
     right: 0;
-    /* transform: translateY(-50%); */
-  }
-  
-  /* Individual colors */
-  .tab[data-tab="tab1"] {
-    background-color: #fff8dc;
-  }
-  .tab[data-tab="tab2"] {
-    background-color: #d6f0ff;
-  }
-  .tab[data-tab="tab3"] {
-    background-color: #d8fdd8;
-  }
-  .tab[data-tab="tab4"] {
-    background-color: #ffd6d6;
-  }
-  
-  /* Hover — no movement */
-  /* .tab:hover {
-    background-color: #e6e6e6;
-    filter: brightness(95%);
-  } */
-  
-  .tab:active {
+    transform: translate(0, -50%);
+}
+
+.tab[data-tab="tab1"] { background-color: #fff8dc; }
+.tab[data-tab="tab2"] { background-color: #d6f0ff; }
+.tab[data-tab="tab3"] { background-color: #d8fdd8; }
+.tab[data-tab="tab4"] { background-color: #ffd6d6; }
+
+.tab:active {
     background-color: #dcdcdc;
     filter: brightness(90%);
-  }
-  
-  /* Active tab */
-  .tab.active {
+}
+
+.tab.active {
     background-color: #dcdcdc;
     color: #333;
-  }
-  
-  /* Tab content visibility */
-  .tab-content {
+}
+
+.tab-content {
     display: none;
     opacity: 0;
     padding: 20px;
     margin-top: 20px;
     background-color: #ffffff;
     border-radius: 8px;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
     display: block;
     opacity: 1;
-  }
+}
 
 .launch-screen {
     position: fixed;
@@ -214,36 +188,21 @@ nav {
 
 .velasco {
     animation: slideInRight 1s ease 0.5s forwards;
-    margin-top: -5vw; /* Pull Velasco slightly up to overlap vertically */
+    margin-top: -5vw;
 }
 
 @keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+    to { opacity: 0; visibility: hidden; }
 }
 
 .timeline-container {
