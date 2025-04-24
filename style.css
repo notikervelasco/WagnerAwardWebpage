@@ -76,6 +76,7 @@ nav {
     margin: 60px auto; 
     list-style: none;
     padding: 0;
+    background-color: #444;
 }
 
 .circle-container li {
@@ -83,8 +84,8 @@ nav {
 }
 
 .tab {
-    width: 100px;
-    height: 50px;
+    width: 125px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
