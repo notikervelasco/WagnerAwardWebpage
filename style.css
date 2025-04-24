@@ -76,8 +76,8 @@ nav {
 
 .circle-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    height: 50%;
     margin: 40px auto; /* horizontally center */
     padding: 0;
     list-style: none;
