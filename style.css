@@ -78,10 +78,10 @@ nav {
     position: relative;
     width: 50%;
     height: 50%;
-    /* margin: 40px auto; horizontally center */
+    margin: 40px auto; 
     padding: 0;
     list-style: none;
-    display: block;
+    display: center;
   }
   
   .circle-container li {
@@ -104,7 +104,7 @@ nav {
     border: 1px solid #ccc;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s;
-    position: absolute;
+    /* position: absolute; */
   }
   
   /* Top/Bottom/Left/Right tab layout */
@@ -147,10 +147,10 @@ nav {
   }
   
   /* Hover — no movement */
-  .tab:hover {
+  /* .tab:hover {
     background-color: #e6e6e6;
     filter: brightness(95%);
-  }
+  } */
   
   .tab:active {
     background-color: #dcdcdc;
