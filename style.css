@@ -132,8 +132,7 @@ nav {
 }
 .tab-row {
     display: flex;
-    justify-content: center;
-    gap: 100px; /* space between tabs */
+    justify-content: space-evenly; /* distributes tabs across the width */
     margin-top: 40px; /* space from banner */
     flex-wrap: wrap; /* allows wrapping if screen too small */
 }
@@ -158,9 +157,8 @@ nav {
 }
 
 .name {
-    font-size: 20vw;
-    font-weight: bold;
-    color: red;
+    font-size: 10vw;
+    color: black;
     line-height: 0.65;
     opacity: 0;
     position: relative;
