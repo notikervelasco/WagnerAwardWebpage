@@ -1,8 +1,23 @@
 
+// Load the sound
+const hoverSound = new Audio('sounds/soundeffect.wav');
+
+// Optional settings
+hoverSound.volume = 0.5; // Set the volume lower (0 = silent, 1 = full volume)
+
+// Play sound on hover
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0; // Reset to start in case hovered repeatedly
+        hoverSound.play();
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
     const contents = document.querySelectorAll('.tab-content');
     
+   
     tabs.forEach(tab => {
         // Single click event to show content
         tab.addEventListener('click', function (e) {
@@ -39,4 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 
