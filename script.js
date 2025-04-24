@@ -5,11 +5,14 @@ const hoverSound = new Audio('sounds/soundeffect.wav');
 // Optional settings
 hoverSound.volume = 0.5; // Set the volume lower (0 = silent, 1 = full volume)
 
-// Play sound on hover
 document.querySelectorAll('.tab').forEach(tab => {
+    const soundFile = tab.getAttribute('data-sound');
+    const sound = new Audio(`sounds/${soundFile}`);
+    sound.volume = 0.5;
+
     tab.addEventListener('mouseenter', () => {
-        hoverSound.currentTime = 0; // Reset to start in case hovered repeatedly
-        hoverSound.play();
+        sound.currentTime = 0; // Rewind in case it's played recently
+        sound.play();
     });
 });
 
