@@ -133,7 +133,7 @@ nav {
 .tab-row {
     display: flex;
     justify-content: center;
-    gap: 30px; /* space between tabs */
+    gap: 100px; /* space between tabs */
     margin-top: 40px; /* space from banner */
     flex-wrap: wrap; /* allows wrapping if screen too small */
 }
