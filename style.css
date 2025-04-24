@@ -112,27 +112,32 @@ nav {
     border: 1px solid #ccc;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s;
-}
+    position: absolute;
+  }
 
-.tab.top {
+  .tab.top {
     top: 0;
-    left: calc(50% - 80px); /* 160px tab width / 2 */
-}
-
-.tab.bottom {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tab.bottom {
     bottom: 0;
-    left: calc(50% - 80px);
-}
-
-.tab.left {
-    top: calc(50% - 40px); /* 80px tab height / 2 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tab.left {
+    top: 50%;
     left: 0;
-}
-
-.tab.right {
-    top: calc(50% - 40px);
+    transform: translateY(-50%);
+  }
+  
+  .tab.right {
+    top: 50%;
     right: 0;
-}
+    transform: translateY(-50%);
+  }  
 
 .circle-container {
     position: relative;
@@ -142,8 +147,8 @@ nav {
     list-style: none;
     padding: 0;
     background-color: #444;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .circle-container li {
