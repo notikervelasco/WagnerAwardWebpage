@@ -128,6 +128,7 @@ nav {
     margin-top: 20px;
     background-color: #ffffff;
     border-radius: 8px;
+    padding-bottom: 60px;
 }
 
 .tab-content.active {
@@ -218,8 +219,9 @@ nav {
 .timeline-container {
     position: relative;
     background-color: #ffffff;
-    /* padding: 100px 0 40px 0; */
+    padding: 100px 0 40px 0;
     margin-top: 100px;
+    padding-top: 100px;  /* moves it lower */
   }
   
   .timeline {
@@ -230,6 +232,7 @@ nav {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    
   }
   
   .timeline::before {
