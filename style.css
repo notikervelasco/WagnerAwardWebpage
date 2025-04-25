@@ -151,7 +151,7 @@ nav {
     animation: fadeOut 1s ease 3s forwards;
 }
   
-  .tab-with-image {
+.tab-with-image {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,15 +159,16 @@ nav {
   }
   
   .tab-image {
-    width: 200px; /* Adjust size as needed */
-    height: 300px;
+    width: 150px;
+    height: auto;
     margin-top: 10px;
-    border-radius: 12px;
+    object-fit: contain;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
   
-  /* Grows the image when hovering the tab */
+  /* Make image scale up when hovering over the tab */
   .tab-with-image:hover .tab-image {
     transform: scale(1.2);
   }
