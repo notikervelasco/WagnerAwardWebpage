@@ -1,14 +1,9 @@
 
-// Load the sound
-const hoverSound = new Audio('sounds/soundeffect.wav');
-
-// Optional settings
-hoverSound.volume = 0.5; // Set the volume lower (0 = silent, 1 = full volume)
 
 document.querySelectorAll('.tab').forEach(tab => {
     const soundFile = tab.getAttribute('data-sound');
     const sound = new Audio(`sounds/${soundFile}`);
-    sound.volume = 0.5;
+    sound.volume = 1;
 
     tab.addEventListener('mouseenter', () => {
         sound.currentTime = 0; // Rewind in case it's played recently
