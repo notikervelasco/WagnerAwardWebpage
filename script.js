@@ -79,20 +79,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const contents = document.querySelectorAll('.tab-content');
     const images = document.querySelectorAll('.tab-image');
 
-    let currentActiveTab = null;
+    let currentActiveTabId = null;
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function (e) {
             e.preventDefault();
 
-            const targetTab = tab.getAttribute('data-tab');
-            const content = document.getElementById(targetTab);
+            const targetTabId = tab.getAttribute('data-tab');
+            const content = document.getElementById(targetTabId);
 
-            // If this tab is already active, deactivate everything
-            if (tab === currentActiveTab) {
+            if (currentActiveTabId === targetTabId) {
+                // Deactivate
                 tab.classList.remove('active');
                 content.classList.remove('active');
-                currentActiveTab = null;
+                currentActiveTabId = null;
 
                 // Show images again
                 images.forEach(img => {
@@ -100,13 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
             } else {
-                // Make this tab active
+                // Activate new tab
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
 
                 tab.classList.add('active');
                 content.classList.add('active');
-                currentActiveTab = tab;
+                currentActiveTabId = targetTabId;
 
                 // Hide images
                 images.forEach(img => {
