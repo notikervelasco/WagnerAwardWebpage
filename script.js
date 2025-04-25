@@ -28,10 +28,12 @@ document.querySelectorAll('.tab').forEach(tab => {
         // Reset all tabs and content
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        // Hide images under all tabs
         document.querySelectorAll('.tab-image').forEach(image => {
-            image.style.display = 'block'; // Show images again
+            image.style.display = 'none'; // Hide images by default
             image.style.transform = 'scale(1)'; // Reset image size
-            image.style.opacity = '1'; // Make sure images are visible
+            image.style.opacity = '1'; // Reset opacity to normal
         });
 
         if (isActive) {
@@ -43,10 +45,9 @@ document.querySelectorAll('.tab').forEach(tab => {
             tab.classList.add('active');
             currentTabContent.classList.add('active');
 
-            // Hide images under all tabs
-            document.querySelectorAll('.tab-image').forEach(image => {
-                image.style.display = 'none';
-            });
+            // Show image of the active tab
+            const image = tab.closest('.tab-with-image').querySelector('.tab-image');
+            image.style.display = 'block'; // Show the image for the active tab
 
             // Center the active tab
             tab.scrollIntoView({ behavior: 'smooth', block: 'center' });
