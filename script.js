@@ -2,21 +2,16 @@
 
 document.querySelectorAll('.tab').forEach(tab => {
     const soundFile = tab.getAttribute('data-sound');
-    
-    if (soundFile) {
-        const sound = new Audio(`sounds/${soundFile}`);
-        sound.volume = 1;
+    // const sound = new Audio(`sounds/${soundFile}`);
+    const sound = new Audio(`sounds/communitycheer.mp3`);
+    sound.volume = 1;
 
-        tab.addEventListener('click', () => {
-            console.log(`Playing sound: ${soundFile}`); // Log to confirm it's triggered
+    tab.addEventListener('click', () => {
+        if (soundFile) {  // Only play sound if the data-sound is defined
             sound.currentTime = 0; // Rewind in case it's played recently
-            sound.play().catch(error => {
-                console.error("Error playing the sound:", error); // Handle any errors with playing the sound
-            });
-        });
-    } else {
-        console.log('No sound file for this tab.');
-    }
+            sound.play();
+        }
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
