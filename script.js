@@ -88,31 +88,37 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetTabId = tab.getAttribute('data-tab');
             const content = document.getElementById(targetTabId);
 
-            if (currentActiveTabId === targetTabId) {
-                // Same tab clicked again — toggle OFF
-                tab.classList.remove('active');
-                content.classList.remove('active');
-                currentActiveTabId = null;
+            // Reset tabs and content
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
 
-                // Show all images
-                images.forEach(img => {
-                    img.style.display = 'block';
-                });
+            // Set active tab and content
+            tab.classList.add('active');
+            content.classList.add('active');
+            currentActiveTabId = targetTabId;
 
-            } else {
-                // New tab clicked — show content, hide images
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
-
-                tab.classList.add('active');
-                content.classList.add('active');
-                currentActiveTabId = targetTabId;
-
-                // Hide all images
-                images.forEach(img => {
-                    img.style.display = 'none';
-                });
-            }
+            // Hide all images
+            images.forEach(img => {
+                img.style.display = 'none';
+            });
         });
     });
-});
+
+    // Pressing spacebar resets everything and brings back the images
+    document.addEventListener('keydown', function (e) {
+        if (e.code === 'Space') {
+            e.preventDefault(); // prevent page scroll
+
+            // Remove active from tabs and content
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Show all images
+            images.forEach(img => {
+                img.style.display = 'block';
+            });
+
+            currentActiveTabId = null;
+        }
+    });
+})
