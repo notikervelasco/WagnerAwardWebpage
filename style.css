@@ -221,9 +221,8 @@ nav {
     background-color: #ffffff;
     padding: 100px 0 40px 0;
     margin-top: 100px;
-    padding-top: 120px;  /* moves it lower */
+    padding-top: 120px;
     padding-bottom: 60px;
-    
   }
   
   .timeline {
@@ -234,7 +233,6 @@ nav {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    
   }
   
   .timeline::before {
@@ -299,4 +297,13 @@ nav {
   
   .timeline-item.bottom .timeline-content {
     top: 130%;
+  }
+  
+  /* NEW IMAGE STYLING FOR TIMELINE */
+  .timeline-image img {
+    width: 260px;
+    max-width: 90%;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
   }
