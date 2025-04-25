@@ -44,32 +44,77 @@
 // });
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+//     const tabs = document.querySelectorAll('.tab');
+//     const contents = document.querySelectorAll('.tab-content');
+//     const images = document.querySelectorAll('.tab-image');  // Selecting all images
+
+//     tabs.forEach(tab => {
+//         // Single click event to show content and toggle the active state
+//         tab.addEventListener('click', function (e) {
+//             e.preventDefault();
+
+//             // Get the data-tab of the clicked tab
+//             const targetTab = tab.getAttribute('data-tab');
+//             const activeContent = document.getElementById(targetTab);
+
+//             // Remove 'active' class from all content and tabs
+//             contents.forEach(content => content.classList.remove('active'));
+//             tabs.forEach(t => t.classList.remove('active'));
+
+//             // Hide all images when a tab is clicked
+//             images.forEach(image => image.style.display = 'none');
+
+//             // Show the content of the clicked tab
+//             activeContent.classList.add('active');
+//             tab.classList.add('active');
+
+//             // After clicking, no images should show below the tabs until the tab is active
+//         });
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
     const contents = document.querySelectorAll('.tab-content');
-    const images = document.querySelectorAll('.tab-image');  // Selecting all images
+    const images = document.querySelectorAll('.tab-image');
+
+    let imagesHidden = false;
 
     tabs.forEach(tab => {
-        // Single click event to show content and toggle the active state
         tab.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Get the data-tab of the clicked tab
             const targetTab = tab.getAttribute('data-tab');
             const activeContent = document.getElementById(targetTab);
 
-            // Remove 'active' class from all content and tabs
+            // Show content
+            contents.forEach(content => content.classList.remove('active'));
+            activeContent.classList.add('active');
+
+            // Highlight active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Hide images only once
+            if (!imagesHidden) {
+                images.forEach(img => {
+                    img.style.display = 'none';
+                });
+                imagesHidden = true;
+            }
+        });
+
+        tab.addEventListener('dblclick', function (e) {
+            // Clear all
             contents.forEach(content => content.classList.remove('active'));
             tabs.forEach(t => t.classList.remove('active'));
 
-            // Hide all images when a tab is clicked
-            images.forEach(image => image.style.display = 'none');
-
-            // Show the content of the clicked tab
-            activeContent.classList.add('active');
-            tab.classList.add('active');
-
-            // After clicking, no images should show below the tabs until the tab is active
+            // Show images again
+            images.forEach(img => {
+                img.style.display = 'block';
+            });
+            imagesHidden = false;
         });
     });
 });
