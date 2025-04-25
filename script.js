@@ -79,42 +79,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const contents = document.querySelectorAll('.tab-content');
     const images = document.querySelectorAll('.tab-image');
 
-    let imagesHidden = false;
+    let currentActiveTab = null;
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetTab = tab.getAttribute('data-tab');
-            const activeContent = document.getElementById(targetTab);
+            const content = document.getElementById(targetTab);
 
-            // Show content
-            contents.forEach(content => content.classList.remove('active'));
-            activeContent.classList.add('active');
+            // If this tab is already active, deactivate everything
+            if (tab === currentActiveTab) {
+                tab.classList.remove('active');
+                content.classList.remove('active');
+                currentActiveTab = null;
 
-            // Highlight active tab
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+                // Show images again
+                images.forEach(img => {
+                    img.style.display = 'block';
+                });
 
-            // Hide images only once
-            if (!imagesHidden) {
+            } else {
+                // Make this tab active
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                content.classList.add('active');
+                currentActiveTab = tab;
+
+                // Hide images
                 images.forEach(img => {
                     img.style.display = 'none';
                 });
-                imagesHidden = true;
             }
-        });
-
-        tab.addEventListener('dblclick', function (e) {
-            // Clear all
-            contents.forEach(content => content.classList.remove('active'));
-            tabs.forEach(t => t.classList.remove('active'));
-
-            // Show images again
-            images.forEach(img => {
-                img.style.display = 'block';
-            });
-            imagesHidden = false;
         });
     });
 });
