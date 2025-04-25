@@ -273,12 +273,12 @@ nav {
   }
   
   .timeline-content {
-    width: 300px;
+    width: 250px;
     padding: 10px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
