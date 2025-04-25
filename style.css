@@ -165,14 +165,15 @@ nav {
   
   .tab-image {
     width: 200px;
-    height:auto;
-    margin-top: 60px; /* pushes image slightly lower */
-    transition: transform 0.3s ease;
-    border: none; /* removes any border */
-    border-radius: 0; /* removes rounded corners */
-    box-shadow: none; /* removes shadow for seamless look */
-    background-color: transparent; /* ensures image doesn't stand out */
-  }
+    height: auto;
+    margin-top: 60px;
+    display: block;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    object-fit: contain; /* ensures the whole image fits inside its container */
+}
   
   /* Make image scale up when hovering over the tab */
   .tab-with-image:hover .tab-image {
