@@ -161,11 +161,11 @@ nav {
   .tab-image {
     width: 150px;
     height: auto;
-    margin-top: 10px;
+    margin-top: 50px;
     object-fit: contain;
     transition: transform 0.3s ease;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
   }
   
   /* Make image scale up when hovering over the tab */
