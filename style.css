@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', 'Arial Rounded MT Bold', sans-serif;
-    background-color: white;
+    background-color: #ffffff;
     cursor: crosshair;
 }
 html, body {
@@ -161,7 +161,7 @@ nav {
   .tab-image {
     width: 150px;
     height: auto;
-    margin-top: 25px; /* pushes image slightly lower */
+    margin-top: 250px; /* pushes image slightly lower */
     object-fit: contain;
     transition: transform 0.3s ease;
     border: none; /* removes any border */
