@@ -5,17 +5,11 @@ document.querySelectorAll('.tab').forEach(tab => {
     const sound = new Audio(`sounds/${soundFile}`);
     sound.volume = 1;
 
-    let hoverTimeout;
-
-    tab.addEventListener('mouseenter', () => {
-        hoverTimeout = setTimeout(() => {
-            sound.currentTime = 0;
+    tab.addEventListener('click', () => {
+        if (soundFile) {  // Only play sound if the data-sound is defined
+            sound.currentTime = 0; // Rewind in case it's played recently
             sound.play();
-        }, 500); // 0.5 second delay
-    });
-
-    tab.addEventListener('mouseleave', () => {
-        clearTimeout(hoverTimeout); // Prevent sound if mouse leaves early
+        }
     });
 });
 
