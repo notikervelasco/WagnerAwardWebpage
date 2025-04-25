@@ -249,7 +249,7 @@ nav {
   
   .timeline-item {
     position: relative;
-    width: 14%; /* ~100% / 7 for space */
+    width: 14%;
     text-align: center;
     z-index: 2;
   }
@@ -299,11 +299,27 @@ nav {
     top: 130%;
   }
   
-  /* NEW IMAGE STYLING FOR TIMELINE */
-  .timeline-image img {
+  /* Image BELOW the paragraph */
+  .timeline-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: 260px;
     max-width: 90%;
+    margin-top: 10px;
+    z-index: 1;
+  }
+  
+  .timeline-item.top .timeline-image {
+    bottom: calc(130% - 320px); /* places image below top paragraph */
+  }
+  
+  .timeline-item.bottom .timeline-image {
+    top: calc(130% + 100px); /* places image below bottom paragraph */
+  }
+  
+  .timeline-image img {
+    width: 100%;
     border-radius: 10px;
-    margin: 10px auto;
     display: block;
   }
