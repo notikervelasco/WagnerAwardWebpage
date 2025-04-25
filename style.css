@@ -168,9 +168,6 @@ nav {
     height:auto;
     margin-top: 60px; /* pushes image slightly lower */
     transition: transform 0.3s ease;
-    object-fit: cover; /* keeps image nicely cropped and fills the box */
-    display: block;
-
     border: none; /* removes any border */
     border-radius: 0; /* removes rounded corners */
     box-shadow: none; /* removes shadow for seamless look */
