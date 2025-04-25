@@ -89,18 +89,18 @@ document.addEventListener('DOMContentLoaded', function () {
             const content = document.getElementById(targetTabId);
 
             if (currentActiveTabId === targetTabId) {
-                // Deactivate
+                // Same tab clicked again — toggle OFF
                 tab.classList.remove('active');
                 content.classList.remove('active');
                 currentActiveTabId = null;
 
-                // Show images again
+                // Show all images
                 images.forEach(img => {
                     img.style.display = 'block';
                 });
 
             } else {
-                // Activate new tab
+                // New tab clicked — show content, hide images
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 content.classList.add('active');
                 currentActiveTabId = targetTabId;
 
-                // Hide images
+                // Hide all images
                 images.forEach(img => {
                     img.style.display = 'none';
                 });
