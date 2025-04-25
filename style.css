@@ -164,15 +164,12 @@ nav {
   }
   
   .tab-image {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     margin-top: 60px;
     display: block;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    background-color: transparent;
-    object-fit: contain; /* ensures the whole image fits inside its container */
+    object-fit: contain;
 }
   
   /* Make image scale up when hovering over the tab */
