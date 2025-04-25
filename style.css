@@ -218,10 +218,8 @@ nav {
 .timeline-container {
     position: relative;
     background-color: #ffffff;
-    padding: 15px 7px; /* controls box size */
+    padding: 20px 30px; /* controls box size */
     border-radius: 8px;
-    width: 250px;        /* wider box */
-    height: 100px;       /* taller box */
     box-shadow: 0 4p
 }
 
@@ -271,8 +269,9 @@ nav {
 }
 
 .timeline-content {
-    max-width: 150px;
     padding: 10px;
+    width: 400px;      /* wider */
+    height: auto; 
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
