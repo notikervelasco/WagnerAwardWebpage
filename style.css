@@ -159,9 +159,9 @@ nav {
   }
   
   .tab-image {
-    width: 150px;
+    width: 200px;
     height: auto;
-    margin-top: 250px; /* pushes image slightly lower */
+    margin-top: 75px; /* pushes image slightly lower */
     object-fit: contain;
     transition: transform 0.3s ease;
     border: none; /* removes any border */
