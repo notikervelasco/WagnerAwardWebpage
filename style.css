@@ -230,6 +230,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     height: 300px;
+    gap: 40px;
   }
   
   .timeline::before {
@@ -245,10 +246,10 @@ nav {
   }
   
   .timeline-item {
+    flex-basis: 16%; /* for 6 items across the full width */
     position: relative;
-    flex: 1;
     text-align: center;
-    z-index: 2;
+    min-width: 100px;
   }
   
   .timeline-item::after {
