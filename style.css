@@ -165,9 +165,8 @@ nav {
   
   .tab-image {
     width: 200px;
-    height: 150px;
+    height:auto;
     margin-top: 60px; /* pushes image slightly lower */
-    object-fit: cover;
     transition: transform 0.3s ease;
     object-fit: cover; /* keeps image nicely cropped and fills the box */
     display: block;
